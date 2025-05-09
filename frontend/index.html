@@ -1,0 +1,117 @@
+
+
+
+<!-- frontend/index.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+    <h1>📝 My To-Do List</h1>
+
+     Task statistics (not used for now) -->
+    <!-- <div id="stats" class="stats-bar"></div>
+
+     Form to add new task -->
+    <!-- <div class="form-container">
+      <input type="text" id="title" placeholder="Enter task title..." />
+      <input type="text" id="description" placeholder="Enter description..." />
+      <button onclick="addTodo()">➕ Add Task</button>
+    </div> -->
+
+    <!-- Filter buttons (not functional unless implemented) -->
+    <!-- <div class="filter-bar">
+      <button onclick="filterTodos('all')">All</button>
+      <button onclick="filterTodos('pending')">Pending</button>
+      <button onclick="filterTodos('completed')">Completed</button>
+    </div> -->
+
+    <!-- Search bar (disabled if not supported in backend) -->
+    <!-- <input
+      type="text"
+      id="searchInput"
+      placeholder="🔍 Search tasks..."
+      style="
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      "
+    /> -->
+
+    <!-- Task list -->
+    <!-- <div id="todo-list"></div> -->
+
+    <!-- Pagination controls (disabled if not supported in backend) -->
+    <!-- <div class="pagination">
+      <button id="prevBtn">⬅️ Prev</button>
+      <button id="nextBtn">Next ➡️</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html> --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app-container">
+    <h1>📝 My To-Do List</h1>
+
+    <!-- Task statistics -->
+    <div id="stats" class="stats-bar">
+      <p><strong>Pending:</strong> <span id="pending-count">0</span></p>
+      <p><strong>Completed:</strong> <span id="completed-count">0</span></p>
+    </div>
+
+    <!-- Form to add new task -->
+    <div class="form-container">
+      <input type="text" id="title" placeholder="Enter task title..." />
+      <input type="text" id="description" placeholder="Enter description..." />
+      <button onclick="addTodo()">➕ Add Task</button>
+    </div>
+
+    <!-- Filter buttons -->
+    <div class="filter-bar">
+      <button onclick="filterTodos('all')">All</button>
+      <button onclick="filterTodos('pending')">Pending</button>
+      <button onclick="filterTodos('completed')">Completed</button>
+    </div>
+
+    <!-- Search bar -->
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="🔍 Search tasks..."
+      onkeyup="handleSearch()"
+      style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ccc;"
+    />
+
+    <!-- Task list -->
+    <div id="todo-list"></div>
+
+    <!-- Pagination controls -->
+    <div class="pagination">
+      <button id="prevBtn" onclick="prevPage()">⬅️ Prev</button>
+      <button id="nextBtn" onclick="nextPage()">Next ➡️</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
