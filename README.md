@@ -44,3 +44,17 @@ todo-api/
 ├── .env # Environment variables for the backend (e.g., DB config)
 ├── .env.example # Example environment variables file
 └── README.md # This README file
+
+
+
+
+API Endpoints
+POST /todos: Add a new to-do item.
+
+GET /todos: Retrieve all to-do items (with pagination, filtering, and search).
+
+GET /todos/:id: Retrieve a specific to-do by ID.
+
+PUT /todos/:id: Update a specific to-do item.
+
+DELETE /todos/:id: Delete a specific to-do item.
