@@ -13,39 +13,7 @@ exports.createTodo = async (req, res) => {
 };
 
 
-// exports.getAllTodos = async (req, res) => {
-//   try {
-//     const [rows] = await db.query('SELECT * FROM todos');
-//     res.status(200).json({ success: true, data: rows });
-//   } catch (err) {
-//     console.error('Error fetching todos:', err);
-//     res.status(500).json({ success: false, message: 'Internal server error' });
-//   }
-// };
 
-// exports.getAllTodos = async (req, res) => {
-//   const { page = 1, limit = 10, search } = req.query;
-//   const offset = (page - 1) * limit;
-
-//   try {
-//     let query = 'SELECT * FROM todos';
-//     let params = [];
-
-//     if (search) {
-//       query += ' WHERE title LIKE ? OR description LIKE ?';
-//       params.push(`%${search}%`, `%${search}%`);
-//     }
-
-//     query += ' LIMIT ? OFFSET ?';
-//     params.push(Number(limit), Number(offset));
-
-//     const [rows] = await db.query(query, params);
-//     res.status(200).json({ success: true, data: rows });
-//   } catch (err) {
-//     console.error('Error fetching todos:', err);
-//     res.status(500).json({ success: false, message: 'Internal server error' });
-//   }
-// };
 exports.getAllTodos = async (req, res) => {
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 5;
