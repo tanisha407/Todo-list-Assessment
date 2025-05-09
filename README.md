@@ -48,13 +48,14 @@ todo-api/
 
 
 
-API Endpoints
-POST /todos: Add a new to-do item.
+## 💭 API ENDPOINTS
 
-GET /todos: Retrieve all to-do items (with pagination, filtering, and search).
+- **POST /todos**: Add a new to-do item.
 
-GET /todos/:id: Retrieve a specific to-do by ID.
+- **GET /todos**: Retrieve all to-do items (with pagination, filtering, and search).
 
-PUT /todos/:id: Update a specific to-do item.
+- **GET /todos/:id**: Retrieve a specific to-do by ID.
 
-DELETE /todos/:id: Delete a specific to-do item.
+- **PUT /todos/:id**: Update a specific to-do item.
+
+- **DELETE /todos/:id**: Delete a specific to-do item.
